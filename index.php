@@ -18,6 +18,8 @@ if (isset($update['message'])) {
     $reply = "مرحباً، $firstName!\n";
     $reply .= "اسم المستخدم الخاص بك: @$username\n";
     $reply .= "معرّف المستخدم (ID): $chatId";
+    echo $firstName;
+    
 
     // إرسال الرد إلى المستخدم
     file_get_contents($apiURL . "sendMessage?chat_id=$chatId&text=" . urlencode($reply));
